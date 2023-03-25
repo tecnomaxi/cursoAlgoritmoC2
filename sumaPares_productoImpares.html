@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        SUMA DE LOS PARES Y PRODUCTO DE LOS IMPARES
+    </h2>
+    <script>
+        let n_num = 0
+        let num = 0
+        let suma_pares = 0
+        let produc_impares = 1
+        let pares = []
+        let impares = []
+
+        n_num = prompt("¿Cuántos números desea ingresar?")
+        for (i = 1; i <= n_num; i++){
+            num = prompt("Ingrese el número "+i)
+            if ((num%2) == 0) {
+                pares.push(num)
+                suma_pares = Number(suma_pares) + Number(num)
+            } else {
+                impares.push(num)
+                produc_impares = Number(produc_impares) * Number(num)
+            }
+        }
+        document.write("Suma de pares: "+pares+" = "+suma_pares+"<br>")
+        document.write("Producto de impares: "+impares+" = "+produc_impares)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<>
+    <h2>
+        Constructora DEVISCORP S.A
+    </h2>
+    <h4>
+        Nómina pago de sueldo
+    </h4>
+    <script>
+        let nombre = ""
+        let horas = 0
+        let sueldo = 0
+
+        for (let i = 1; i <= 80; i++) {
+            nombre = prompt("Ingrese nombre del trabajador:")
+            horas = parseInt(prompt("Ingrese las horas trabajadas:"))
+            sueldo = horas * 10
+            document.write(nombre+" "+sueldo+"<br>")
+        }
+    </script>
+</body>
+</html>

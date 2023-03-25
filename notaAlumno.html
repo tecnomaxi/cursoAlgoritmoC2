@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        CÁLCULO PROMEDIO DE ALUMNO
+    </h2>
+    <script>
+        /*Se ingresa por teclado nombre del alumno, nota1, nota2 y nota 3, calcular la suma y el 
+        promedio total de las calificaciones, presentar por pantalla el resultado.*/
+
+        let nombreAlumno = ""
+        let nota1 = 0
+        let nota2 = 0
+        let nota3 = 0
+        let totalNotas = 0
+        let promedio = 0
+
+        nombreAlumno = prompt("Nombre de Alumno:")
+        nota1 = parseInt(prompt("Total Nota1:"))
+        nota2 = parseInt(prompt("Total Nota2:"))
+        nota3 = parseInt(prompt("Total Nota3:"))
+
+        totalNotas = nota1 + nota2 + nota3
+        promedio = totalNotas / 3
+
+        document.write("Nombre del Alumno: "+nombreAlumno+"<br>")
+        document.write("Suman notas: "+totalNotas+"<br>")
+        document.write("Promedio: "+promedio.toFixed(2))
+    </script>
+</body>
+</html>

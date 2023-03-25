@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        CONVERTE CALIFICACIONES NUMÉRICAS A TEXTO
+    </h2>
+    <script>
+        /*Desarrolle un algoritmo que permita convertir calificaciones numéricas, según la
+        siguiente tabla: 
+        1. A = 19 y 20 SOBRESALIENTE
+        2. B = 16, 17 y 18 MUY BUENO
+        3. C = 13, 14 y 15 BUENO
+        4. D = 10, 11 y 12 REGULAR
+        5. E = 1 hasta el 9. DEFICIENTE*/
+
+        let calificaTexto = ""
+        let calificaNumero = 0
+
+        calificaNumero = prompt("Ingrese el puntaje final de la Nota:")
+        if (calificaNumero >=19 && calificaNumero <=20) {
+            calificaTexto = "SOBRESALIENTE"
+        } else if (calificaNumero >=16 && calificaNumero <=18) {
+            calificaTexto = "MUY BUENO"
+        } else if (calificaNumero >=13 && calificaNumero <=15) {
+            calificaTexto = "BUENO"
+        } else if (calificaNumero >=10 && calificaNumero <=12) {
+            calificaTexto = "REGULAR"
+        } else if (calificaNumero >=1 && calificaNumero <=9) {
+            calificaTexto = "DEFICIENTE"
+        }
+
+        document.write("Puntaje Total: "+calificaNumero+"<br>")
+        document.write("Calificación en letra: "+calificaTexto)
+    </script>
+</body>
+</html>

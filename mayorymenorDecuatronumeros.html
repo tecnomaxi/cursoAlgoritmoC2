@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        MAYOR Y MENOR DE CUATRO NUMEROS
+    </h2>
+    <script>
+        /*Desarrolle un algoritmo que lea cuatro números diferentes y a continuación imprima el
+        mayor de los cuatro números introducidos y también el menor de ellos.  */
+
+        let uno = 0
+        let dos = 0
+        let tres = 0
+        let cuatro = 0
+        let varMayor = ""
+        let varMenor = ""
+        let mayor = 0
+        let menor = 0
+
+        for (let i = 1; i <= 4; i++){
+            if (i == 1) {
+                uno = parseInt(prompt("Ingrese el número 1:"))
+                menor = uno
+                mayor = uno
+                varMenor = "primer"
+                varMayor = "primer"
+            } else if(i == 2){
+                dos = parseInt(prompt("Ingrese el número 2:"))
+                if (dos < menor){
+                    menor = dos
+                    varMenor = "segundo"
+                } else if(dos > mayor){
+                    mayor = dos
+                    varMayor = "segundo"
+                }
+            } else if(i == 3){
+                tres = parseInt(prompt("Ingrese el número 3:"))
+                if (tres < menor){
+                    menor = tres
+                    varMenor = "tercer"
+                } else if(tres > mayor){
+                    mayor = tres
+                    varMayor = "tercer"
+                }
+            } else if(i == 4){
+                cuatro = parseInt(prompt("Ingrese el número 4:"))
+                if (cuatro < menor){
+                    menor = cuatro
+                    varMenor = "cuarto"
+                } else if(cuatro > mayor){
+                    mayor = cuatro
+                    varMayor = "cuarto"
+                }
+            }
+        }
+
+        document.write("El mayor es el "+varMayor+" número con el valor: "+mayor+"<br>")
+        document.write("El menor es el "+varMenor+" número con el valor: "+menor)
+    </script>
+</body>
+</html>

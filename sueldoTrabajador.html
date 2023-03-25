@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        CÁLCULO DE SUELDO
+    </h2>
+    <script>
+        /*Diseñar el diagrama de flujo para calcular el sueldo total al fin de mes, si se sabe que
+        la empresa reconoce un 10% de comisión sobre el total de las ventas realizadas, se debe imprimir:
+        el total de comisiones y el sueldo total a recibir.*/
+
+        let nombreVendedor = ""
+        let sueldoBasico = 0
+        let ventas1 = 0
+        let ventas2 = 0
+        let ventas3 = 0
+        let totalVentas = 0
+        let comision = 0
+        let totalSueldo = 0
+
+        nombreVendedor = prompt("Nombre de Vendedor:")
+        sueldoBasico = parseInt(prompt("Sueldo Básico:"))
+        ventas1 = parseInt(prompt("Total Venta1:"))
+        ventas2 = parseInt(prompt("Total Venta2:"))
+        ventas3 = parseInt(prompt("Total Venta3:"))
+
+        totalVentas = ventas1 + ventas2 + ventas3
+        comision = totalVentas * 0.1
+        totalSueldo = sueldoBasico + comision
+
+        document.write("Nombre del Vendedor: "+nombreVendedor+"<br>")
+        document.write("Comisiones: "+comision+"<br>")
+        document.write("Total Sueldo: "+totalSueldo)
+    </script>
+</body>
+</html>

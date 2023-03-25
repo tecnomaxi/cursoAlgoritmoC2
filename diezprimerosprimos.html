@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<>
+    <h2>
+        IMPRIME LOS 10 PRIMEROS PRIMOS Y CUENTA LOS QUE ESTAN ENTRE 1-10 Y 15-25
+    </h2>
+    <script>
+        /*Realizar un algoritmo que imprima los 10 primeros primos y contar cuantos están entre 
+        1 - 10 y 15 – 25. */
+
+        let cuenta_bucle = 1
+        let num = 2
+        let primos_uno_a_diez = 0
+        let primos_quince_a_veinticinco = 0
+        do {
+            let resp = "true"
+            if (num > 2){
+                for (var p = 2; p <= num - 1; p++){
+                    if ((num%p) == 0){
+                        resp = "false"
+                        break
+                    }
+                }
+            }
+            if (resp == "true"){
+                document.write(num+"<br>")
+                cuenta_bucle++
+                if (num >= 1 && num <= 10) {
+                    primos_uno_a_diez++
+                } else if (num >= 15 && num <= 25) {
+                    primos_quince_a_veinticinco++
+                }
+            }
+            num++
+        } while (cuenta_bucle <= 10);
+        document.write("Cantidad de primos del 1 al 10 es: "+primos_uno_a_diez+"<br>")
+        document.write("Cantidad de primos del 15 al 25 es: "+primos_quince_a_veinticinco+"<br>")
+    </script>
+    <h2>
+        ¡GRACIAS!
+    </h2>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        LOS 10 PRIMEROS NÚMEROS FIBONACCI Y CUANTOS PRIMOS HAY
+    </h2>
+    <script>
+        /*Realizar un algoritmo que presente los 10 primeros números Fibonacci y
+        cuente cuántos números primos hay.*/
+
+        let np = 1
+        let ns = 1
+        let f = 1
+        let primo = 0
+        document.write(f+"<br>")
+        for (i = 2; i <= 10; i++){
+            if (f > 1) {
+                let r = "true"
+                for (var p = 2;p <= f-1;p++ ){
+                    if ((f%p)==0) {
+                        r = "false"
+                        break
+                    }
+                }
+                if (r == "true") {
+                    primo++
+                }
+                document.write(f+"<br>")
+                f = ns + np
+                np = ns
+                ns = f
+            } else {
+                document.write(f+"<br>")
+                  f = ns + np
+                  ns = f
+            }
+        }
+        document.write("Existen "+primo+" números primos")
+    </script>
+</body>
+</html>

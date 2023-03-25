@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+    <script>
+        /*Desarrolle un algoritmo que permita calcular Promedio de Notas; finaliza cuando N = 0*/
+
+        let nota = 0
+        let totalnotas = 1
+
+        while (totalnotas >= 1) {
+            let lista = []
+            let sumaNotas = 0
+            let promedio = 0
+            totalnotas = parseInt(prompt("Ingrese la cantidad de notas a promediar:\nAviso: ¡Ingrese 0 o ningún valor para salir del proceso!"))
+            for (let i = 1; i <= totalnotas; i++) {
+                nota = parseInt(prompt("Ingrese una Nota:"))
+                sumaNotas = sumaNotas + nota
+                lista.push(nota)
+            }
+            promedio = sumaNotas / totalnotas
+            if (totalnotas >= 1) {
+                alert("CALCULA PROMEDIO DE NOTAS:\nLista de Notas: "+lista+"\nPromedio es "+promedio)
+            }
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>CALCULO DE MINUTOS ENTRE DOS HORAS</h2>
+    <script>
+        /*Realice un algoritmo que determine cuantos minutos hay en 2 horas. */
+
+        horaInicio = 0
+        horaFinal = 0
+        minutos = 0
+
+        horaInicio = parseInt(prompt("Ingrese la hora de inicio:"))
+        horaFinal = parseInt(prompt("Ingrese la hora de final:"))
+
+        if (horaInicio > 23 || horaInicio < 0 || horaFinal > 23 || horaFinal < 0) {
+            document.write("¿¡ERROR!. La hora ingresada debe estar entre 0 y 23")
+        } else {
+            if (horaInicio > horaFinal) {
+                minutos = (24 - horaInicio + horaFinal) * 60
+            } else {
+                minutos = (horaFinal - horaInicio) * 60
+            }
+            document.write("La cantidad de minutos entre las "+horaInicio+" horas y las "+horaFinal+" horas es: "+minutos)
+        }
+    </script>
+</body>
+</html>

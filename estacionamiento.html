@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>SERVICIO DE ESTACIONAMIENTO</h2>
+    <h3>============► Calculadora ◄============</h3>
+    <div>
+        <labe>Hora de Ingreso: </labe>
+        <input type="text" id="horaIngreso" maxlength="4" size="3" name="horaIngreso">
+    </div>
+    <br>
+    <div>
+        <labe>Hora de Salida:&nbsp; </labe>
+        <input type="text" id="horaSalida" maxlength="4" size="3" name="horaSalida">
+    </div>
+    <br>
+    <div>
+        <input type="button" id="calc" value="Calcular Pago" onclick="calcula()">
+    </div>
+    <h3>======================================</h3>
+    <div>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total a Pagar:&nbsp;&nbsp;&nbsp;$ 
+            <input id="valorPago" size="4" style="font-size: 1.2em;font-weight: 800;" readonly>
+        </h3>
+    </div>
+    <h3>======================================</h3>
+
+    <script>
+        /*Realice un algoritmo que calcule el monto a pagar por el servicio de estacionamiento,
+        teniendo en cuenta que por la primera hora de estadía se tiene una tarifa de $20 y las 
+        restantes tienen un costo de $5. 
+        Se tiene como datos: hora de entrada, hora de salida (formato militar), iniciada una hora 
+        se contabiliza como hora total. */
+
+        function calcula() {
+            let totalPago = 0
+            let totalH = 0
+            let redondeaH = 0
+            let horaInicio = parseInt(document.getElementById("horaIngreso").value)
+            let horaFinal = parseInt(document.getElementById("horaSalida").value)
+
+            if (horaFinal >= horaInicio) {
+                totalH = horaFinal - horaInicio
+                if (totalH > 100) {
+                    redondeaH = totalH % 100
+                    if (redondeaH > 0) {
+                        totalPago = 20 + ((Math.ceil(totalH/100) - 1)  * 5)
+                    } else {
+                        totalPago = 20 + (((totalH/100) - 1)  * 5)
+                    }
+                } else {
+                    totalPago = 20
+                }
+            } else {
+                totalH = (2400 - horaInicio) + horaFinal
+                alert(totalH)
+                if (totalH > 100) {
+                    redondeaH = totalH % 100
+                    if (redondeaH > 0) {
+                        totalPago = 20 + ((Math.ceil(totalH/100) - 1)  * 5)
+                    } else {
+                        totalPago = 20 + (((totalH/100) - 1)  * 5)
+                    }
+                } else {
+                    totalPago = 20
+                }
+            }
+            document.getElementById("valorPago").value = totalPago
+        }
+    </script>
+</body>
+</html>

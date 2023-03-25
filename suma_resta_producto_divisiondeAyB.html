@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        SUMA, RESTA, PRODUCTO Y DIVISIÓN DE A Y B
+    </h2>
+    <script>
+        /*Desarrolle un Algoritmo que lee dos números enteros A y B, imprimir su suma, resta, 
+        producto y división. */
+
+        let a = 0
+        let b = 0
+        let suma = 0
+        let resta = 0
+        let producto = 0
+        let division = 0
+
+        a = parseInt(prompt("Ingrese el número A:"))
+        b = parseInt(prompt("Ingrese el número B:"))
+
+        suma = a + b
+        resta = a - b
+        producto = a * b
+        division = a / b
+
+        document.write("Suma de A y B es: "+suma+"<br>")
+        document.write("Resta de A y B es: "+resta+"<br>")
+        document.write("Producto de A y B es: "+producto+"<br>")
+        document.write("Division de A y B es: "+division.toFixed(2))
+    </script>
+</body>
+</html>

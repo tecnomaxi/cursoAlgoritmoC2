@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+    <script>
+        /*Desarrolle un algoritmo que le permita determinar de una lista de números:
+        1. ¿Cuántos están entre el 50 y 75, ambos inclusive? 
+        2. ¿Cuántos mayores de 80? 
+        3. ¿Cuántos menores de 30? 
+        El algoritmo debe finalizar cuando n (el total de números de la lista), sea igual a 0.*/
+
+        let num = 0
+        let totalnum = 1
+
+        while (totalnum >= 1) {
+            let lista = []
+            let rangoA = 0
+            let rangoB = 0
+            let rangoC = 0
+            totalnum = prompt("Ingrese la cantidad de números a ingresar en la lista:\nNota: ¡Ingrese 0 o ningún valor para salir del proceso!")
+            for (let i = 1; i <= totalnum; i++) {
+                num = prompt("Ingrese un número entero positivo:")
+                lista.push(num)
+                if (num >= 50 && num <= 75) {
+                    rangoA++
+                } else if (num > 80) {
+                    rangoB++
+                } else if (num < 30) {
+                    rangoC++
+                }
+            }
+            if (totalnum >= 1) {
+                alert("CONTEO POR RANGOS DE VALORES INGRESADOS EN LA LISTA:\nLista de valores ingresados: "+lista+"\nValores entre 50 y 75: "+rangoA+"\nValores mayores a 80 : "+rangoB+"\nValores menores a 30 : "+rangoC)
+            }
+        }
+    </script> 
+</body>
+</html>

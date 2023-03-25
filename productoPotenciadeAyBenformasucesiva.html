@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        CALCULA A*B CON SUMAS SUCESIVAS, Y 𝐴^𝐵, CON MULTIPLICACIONES SUCESIVAS
+    </h2>
+    <script>
+        let a = 0
+        let b = 0
+        let producto = 0
+        let potencia = 1
+
+        a = parseInt(prompt("Ingrese el valor de A:"))
+        b = parseInt(prompt("Ingrese el valor de B:"))
+        if (b > 1) {
+            for (i = 1; i <= b; i++){
+                producto = producto + a
+                potencia = potencia * a
+            }
+        } else if (b == 1) {
+                producto = a
+                potencia = a
+        } else if (b == -1) {
+                producto = -a
+                potencia = 1 / a
+        } else if (b < -1) {
+            for (i = -1; i >= b; i--){
+                producto = producto + (-a)
+                potencia = potencia * a
+            }
+            potencia = 1 / potencia
+        }
+        document.write(a+"*"+b+" = "+producto+"<br>")
+        document.write(a+"^"+b+" = "+potencia.toFixed(4))
+    </script>
+</body>
+</html>

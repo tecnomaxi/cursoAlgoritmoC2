@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <h2>
+        PRODUCTO ENTRE A Y B CON SUMAS SUCESIVAS
+    </h2>
+    <script>
+        /*Realizar un algoritmo que permita ingresar dos valores A y B, presentar la Multiplicación 
+        de los Valores (A * B) utilizando sumas sucesivas.*/
+
+        let numeroA = 0
+        let numeroB = 0
+        let producto = 0
+
+        numeroA = parseInt(prompt("Ingrese el Número A:"))
+        numeroB = parseInt(prompt("Ingrese el Número B:"))
+
+        if (numeroB > 1){
+            for (let i = 1; i <= numeroB; i++){
+            producto = producto + numeroA
+        }
+
+        } else if(numeroB == 0){
+            producto = 0
+        } else {
+            producto = numeroA
+        }
+
+        document.write("El producto entre A y B es: "+producto)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Imprime los N primeros primos además la suma y promedio de ellos.
+    </h2>
+    <script>
+        let primos = []
+        let nprimos = 0
+        let cuenta = 1
+        let num = 2
+        let sumaprimos = 0
+        let promedioprimos = 0
+
+        nprimos = prompt("Ingrese cuantos primeros desea:")
+        primos.push(num)
+        do {
+            let r = "true"
+            num++
+            for (var p = 2;p <= num-1;p++ ){
+                    if ((num%p)==0) {
+                        r = "false"
+                        break
+                    }
+            }
+            if (r == "true") {
+                primos.push(num)
+                cuenta++
+            }            
+        } while (cuenta < nprimos);
+        for (let i = 0; i < primos.length; i++){
+            sumaprimos += primos[i]
+        }
+        promedioprimos = sumaprimos / cuenta
+        document.write("Los "+nprimos+" primeros números primos son: "+primos+"<br>")
+        document.write("La suma de los "+nprimos+" primeros números primos es: "+sumaprimos+"<br>")
+        document.write("El valor promedio de los "+nprimos+" números primos es: "+promedioprimos)              
+    </script>
+</body>
+</html>

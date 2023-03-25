@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        SIMILAR RELOJ
+    </h2>
+    <script>
+        let h = 0
+        let m = 0
+        let s = 0
+
+        h = prompt("Ingrese la hora:")
+        m = prompt("Ingrese los minutos:")
+        s = prompt("Ingrese los segundos:")
+        if (h < 10) { h = "0"+h }
+        if (m < 10) { m = "0"+m }
+        if (s < 10) { s = "0"+s }
+
+        for (let i = 0; i <= 1; i++){
+            document.write(h+":"+m+":"+s+"<br>")
+            s++
+            if (s > 59) {
+                m++
+                s = 0
+                s = "0"+s
+                if (m < 10) { m = "0"+m }
+                if (m > 59) {
+                    h++
+                    m = 0
+                    m = "0"+m
+                    if (h < 10) { h = "0"+h }
+                    if (h > 23) {
+                        h = 0
+                        h = "0"+h
+                    }
+                }
+            } else {
+                if (s < 10) { s = "0"+s }
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numEntradas = 0
+        let costoEntradas = 0
+        let totalPago = 0
+
+        numEntradas = parseInt(prompt("Cuántas entradas desea:\nNota: Compra máxima 4 entradas"))
+        costoEntradas = parseInt(prompt("Ingrese el costo de cada entrada:"))
+        if (numEntradas == 2) {
+            totalPago = numEntradas * (costoEntradas - (costoEntradas * 0.15)) 
+        } else if(numEntradas == 3) {
+            totalPago = numEntradas * (costoEntradas - (costoEntradas * 0.20)) 
+        } else if(numEntradas == 4){
+            totalPago = numEntradas * (costoEntradas - (costoEntradas * 0.30)) 
+        }
+        document.write("Total a pagar es: "+totalPago)
+    </script>
+</body>
+</html>

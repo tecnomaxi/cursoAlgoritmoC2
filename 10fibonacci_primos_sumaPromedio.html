@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareC2</title>
+</head>
+<body>
+    <script>
+        /*Realizar un algoritmo que presente los 10 primeros números Fibonacci y
+        cuente cuántos números primos hay.*/
+
+        let np = 1
+        let ns = 1
+        let f = 1
+        let fibonaccis = []
+        let primos = []
+        let nprimos = 0
+        let sumaprimos = 0
+        let promedioprimos = 0
+
+        fibonaccis.push(f)
+        for (i = 2; i <= 10; i++){
+            if (f > 1) {
+                let r = "true"
+                for (var p = 2;p <= f-1;p++ ){
+                    if ((f%p)==0) {
+                        r = "false"
+                        break
+                    }
+                }
+                if (r == "true") {
+                    primos.push(p)
+                    nprimos++
+                }
+                fibonaccis.push(f)
+                f = ns + np
+                np = ns
+                ns = f
+            } else {
+                fibonaccis.push(f)
+                f = ns + np
+                ns = f
+            }
+        }
+        for (let i = 0; i < primos.length; i++){
+            sumaprimos += primos[i]
+        }
+        promedioprimos = sumaprimos / nprimos
+        document.write("Serie de los 10 primeros números fibonacci: "+fibonaccis+"<br>")
+        document.write("Números primos de los 10 primeros fibonacci: "+primos+"<br>")
+        document.write("La suma de los números primos es: "+sumaprimos+"<br>")
+        document.write("El valor promedio de los números primos es: "+promedioprimos)
+    </script>
+</body>
+</html>
